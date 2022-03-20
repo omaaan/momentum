@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Anton&family=Noto+Sans+KR:wght@300;500&family=Open+Sans:ital,wght@0,500;1,300&family=Roboto+Mono:ital,wght@0,300;0,500;1,500&family=Smooch+Sans:wght@500&display=swap");
+/*  component  */
+@import url("reset.css");
+@import url("variables.css");
+
+body {
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+/*  login  */
+#login-form {
+  position: absolute;
+  top: 40%;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #c94a20;
+  font-size: 90px;
+  font-family: "Amatic SC", cursive;
+  font-weight: 900;
+}
+#login-form input {
+  margin-top: 10px;
+  width: 50%;
+  font-size: 40px;
+  outline: none;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #c94a20;
+  text-align: center;
+  color: aliceblue;
+  border-radius: 10px;
+}
+#login-form input:focus {
+  border-color: whitesmoke;
+  color: whitesmoke;
+  transition: var(--trans);
+}
+.column {
+  transition: all 1s linear;
+  z-index: 2;
+  display: flex;
+  width: 33%;
+  height: 100vh;
+}
+
+/* column2 */
+.column:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
+}
+h1 {
+  font-weight: 700;
+  margin-top: 90px;
+  transition: color 0.5s ease-in-out;
+  color: white;
+  font-size: 85px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Amatic SC", cursive;
+}
+#clock {
+  margin-top: 50px;
+  font-weight: 500;
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 130px;
+  text-shadow: var(--shadow);
+  color: #c94a20;
+}
+#date {
+  font-size: 25px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+body > img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  position: absolute;
+}
+#weather {
+  font-size: 50px;
+  color: white;
+  font-family: "Amatic SC", cursive;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+#todo-form {
+  text-align: center;
+}
+#todo-list {
+  margin-top: 10px;
+  color: whitesmoke;
+  line-height: 1.5;
+  text-align: center;
+}
+#todo-list button {
+  opacity: 0.7;
+  background: none;
+  right: 10px;
+  border: none;
+  transition: var(--trans);
+}
+#todo-list button:hover {
+  font-size: 15px;
+  opacity: 1;
+}
+
+/*  quote  */
+#quote {
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  bottom: 80px;
+  font-style: italic;
+  color: whitesmoke;
+}
+#quote span {
+  width: 100%;
+}
+#quote span:first-child {
+  font-weight: 500;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
+#quote span:last-child {
+  font-weight: 300;
+  font-style: italic;
+}
+/*  column3  */
+.icons {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 80px;
+  right: 80px;
+  font-size: 50px;
+  text-shadow: var(--shadow);
+}
+.icons i {
+  color: whitesmoke;
+  opacity: 0.7;
+  transition: var(--trans);
+}
+.icons i:hover {
+  opacity: 1;
+}
+.youtube i:hover {
+  color: #fe0000;
+}
+
+@keyframes googlefont {
+  0% {
+    color: whitesmoke;
+  }
+  20% {
+    color: #4285f4;
+  }
+  40% {
+    color: #ea4235;
+  }
+  60% {
+    color: #fabd04;
+  }
+  80% {
+    color: #34a853;
+  }
+  100% {
+    color: #4285f4;
+  }
+}
+
+.google i:hover {
+  animation: googlefont 3s linear forwards;
+}
+.naver i:hover,
+.blog i:hover {
+  color: RGB(24, 206, 96);
+}
+@keyframes appeariconbtn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.icons span {
+  animation: appeariconbtn 1s ease-in-out forwards;
+  opacity: 0;
+}
+.icons span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.icons span:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.icons span:nth-child(4) {
+  animation-delay: 1.1s;
+}
+.hidden {
+  display: none !important;
+}
