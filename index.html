@@ -15,7 +15,16 @@
   </head>
   <body>
     <!--column1-->
-    <div class="column hidden"></div>
+    <div class="column hidden">
+      <i id="playicon" class="fas fa-headphones-alt musicicon"></i
+      ><audio
+        id="audio"
+        class="hidden"
+        controls
+        autoplay
+        src="media/codingmusic.mp3"
+      ></audio>
+    </div>
     <!--column2-->
     <div class="column">
       <form id="login-form" class="hidden">
@@ -25,7 +34,6 @@
       </form>
       <div class="main hidden">
         <h1 id="greeting" class="hidden"></h1>
-        <div id="weather"><span></span><span></span><span></span></div>
         <h2 id="clock">00:00:00</h2>
         <h3 id="date"></h3>
         <form id="todo-form">
@@ -41,6 +49,8 @@
     </div>
     <!--column3-->
     <div id="column3" class="column hidden">
+      <div id="weather"><span></span><span></span><span></span></div>
+
       <div class="icons">
         <span class="youtube"
           ><a href="https://www.youtube.com/"
@@ -72,6 +82,7 @@
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/date.js"></script>
+    <script src="js/music.js"></script>
   </body>
   <script
     src="https://kit.fontawesome.com/37a1303ea1.js"
